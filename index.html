@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(52, 52, 75);
+            gap: 150px;
+            position: relative;
+        }
+
+        .current_player {
+            background: rgba(255, 255, 255, 0.15);
+            /* color: #fff; */
+            padding: 10px 20px;
+            font-family: cursive;
+            color: #fff;
+            font-size: 22px;
+
+
+        }
+
+        .current_player.active {
+            background: rgb(34, 33, 33);
+            display: none;
+        }
+
+        .boxes {
+            width: 360px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.15);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            aspect-ratio: 1/1;
+            box-shadow: 0px 0px 10px black;
+            padding: 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .box {
+            width: 100%;
+            /* background-color:blue; */
+            font-size: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+            aspect-ratio: 1/1;
+            font-family: cursive;
+        }
+
+        .box1,
+        .box2,
+        .box5,
+        .box4 {
+            border-right: 2px solid whitesmoke;
+            border-bottom: 2px solid whitesmoke;
+        }
+
+        .box7,
+        .box8 {
+            border-right: 2px solid whitesmoke;
+
+        }
+
+        .box3,
+        .box6 {
+            border-bottom: 2px solid whitesmoke;
+        }
+
+        .startbtn {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            color: white;
+            font-family: cursive;
+            opacity: 0;
+        }
+
+        .startbtn.active {
+            opacity: 1;
+        }
+        .box{
+
+        }
+        .box.win{
+            background: rgba(64, 219, 26, 0.4);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="current_player">
+
+        </p>
+
+        <div class="boxes">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+            <div class="box box6"></div>
+            <div class="box box7"></div>
+            <div class="box box8"></div>
+            <div class="box box9"></div>
+        </div>
+        <div class="startbtn  active">
+            New Game
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <!-- <script src="./index.js"></script> -->
+
+</body>
+
+</html>
